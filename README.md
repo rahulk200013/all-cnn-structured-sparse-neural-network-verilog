@@ -18,6 +18,8 @@ This project demonstrates the ASIC implementation of an All CNN Structured Spars
 - Default configuration set for the MNIST dataset.
 - Can work with any dataset.
 
+For detailed explaination of its working check the papers or the [Project_Report.pdf](docs/Project_Report.pdf) in docs folder.
+
 ## Prerequisites
 - Python
 - PyTorch
