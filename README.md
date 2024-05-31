@@ -17,8 +17,9 @@ This project demonstrates the ASIC implementation of an All CNN Structured Spars
 - Global max pooling after convolutional layers.
 - Default configuration set for the MNIST dataset.
 - Can work with any dataset.
+- Only valid for structured sparse neural networks
 
-For detailed explaination of its working check the papers or the [Project_Report.pdf](docs/Project_Report.pdf) in docs folder.
+For a detailed explanation of the workings, check the papers and the [Project_Report.pdf](docs/Project_Report.pdf) in docs folder.
 
 ## Prerequisites
 - Python
