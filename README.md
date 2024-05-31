@@ -23,7 +23,7 @@ This project demonstrates the ASIC implementation of an All CNN Structured Spars
 - Verilog
 
 ## Training and Saving the Model
-Train your model in PyTorch with the given constraints and save it as follows:
+Train your model in PyTorch keeping in mind the above constraints and save it as follows:
 ```python
 torch.save({'model': model.state_dict(),
             ...
@@ -39,7 +39,7 @@ torch.save({'model': model.state_dict(),
   ```
 - Place the trained model `cnn_model.pt` in the `model` folder.
 - Modify the CNN architecture in `scripts/cnn_model_arch.py` to match your model's parameters.
-- If using a dataset other than MNIST, update the dataset details in scripts/generate_testbench.py at line 223.
+- If using a dataset other than MNIST, update the dataset details in `scripts/generate_testbench.py` at line 223.
 - Generate updated verilog files:
   ``` sh
   python scripts/generate_verilog_and_LUTs.py --in_size=<image_size> --num_classes=<num_classes>
