@@ -6,12 +6,12 @@ This project demonstrates the ASIC implementation of an All CNN Structured Spars
 
 ## Features
 - Fully parameterized architecture with customizable layers:
-  - Input Channels
-  - Input Size
-  - Number of Kernels
-  - Kernel Size
-  - Stride
-  - Padding
+  1 Input Channels
+  2 Input Size
+  3 Number of Kernels
+  4 Kernel Size
+  5 Stride
+  6 Padding
 - 16-bit fixed-point arithmetic (8 integer bits, 8 fractional bits).
 - Convolutional layers only; dense layers must be converted to 1x1 convolutional layers.
 - Global max pooling after convolutional layers.
@@ -38,15 +38,15 @@ torch.save({'model': model.state_dict(),
   cd all-cnn-structured-sparse-neural-network-verilog
   ```
 - Place the trained model `cnn_model.pt` in the `model` folder.
-- Modify the CNN architecture in scripts/cnn_model_arch.py to match your model's parameters.
+- Modify the CNN architecture in `scripts/cnn_model_arch.py` to match your model's parameters.
 - If using a dataset other than MNIST, update the dataset details in scripts/generate_testbench.py at line 223.
 - Generate updated verilog files:
-  ``` bash
+  ``` sh
   python scripts/generate_verilog_and_LUTs.py --in_size=<image_size> --num_classes=<num_classes>
   python scripts/generate_testbench.py --num_classes=<num_classes>
   ```
   For example, for the MNIST dataset with an image size of 28x28 and 10 classes:
-  ``` bash
+  ``` sh
   python scripts/generate_verilog_and_LUTs.py --in_size=28 --num_classes=10
   python scripts/generate_testbench.py --num_classes=10
   ```
