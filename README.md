@@ -1,8 +1,8 @@
 # ASIC Implementation of All CNN Structured Sparse Neural Network in Verilog
 
 This project demonstrates the ASIC implementation of an All CNN Structured Sparse Neural Network in Verilog, based on the following papers:
-- ["An Efficient Hardware Accelerator for Structured Sparse Convolutional Neural Networks on FPGAs"](https://arxiv.org/abs/2001.01955)
-- ["Striving for Simplicity: The All Convolutional Net"](https://arxiv.org/abs/1412.6806)
+- [An Efficient Hardware Accelerator for Structured Sparse Convolutional Neural Networks on FPGAs](https://arxiv.org/abs/2001.01955)
+- [Striving for Simplicity: The All Convolutional Net](https://arxiv.org/abs/1412.6806)
 
 ## Features
 - Fully parameterized architecture with customizable layers:
