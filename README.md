@@ -16,6 +16,7 @@ This project demonstrates the ASIC implementation of an All CNN Structured Spars
 - Convolutional layers only; dense layers must be converted to 1x1 convolutional layers.
 - Global max pooling after convolutional layers.
 - Default configuration set for the MNIST dataset.
+- Can work with any dataset.
 
 ## Prerequisites
 - Python
@@ -45,7 +46,7 @@ torch.save({'model': model.state_dict(),
   python scripts/generate_verilog_and_LUTs.py --in_size=<image_size> --num_classes=<num_classes>
   python scripts/generate_testbench.py --num_classes=<num_classes>
   ```
-  For example, for the MNIST dataset with an image size of 28x28 and 10 classes:
+  For example, for the MNIST dataset with an image size of 28x28x1 and 10 classes:
   ``` sh
   python scripts/generate_verilog_and_LUTs.py --in_size=28 --num_classes=10
   python scripts/generate_testbench.py --num_classes=10
