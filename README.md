@@ -32,15 +32,15 @@ torch.save({'model': model.state_dict(),
 ```
 
 ## Running this project
-- Clone the repository:
+1. Clone the repository:
   ``` bash
   git clone https://github.com/rahulk200013/all-cnn-structured-sparse-neural-network-verilog.git
   cd all-cnn-structured-sparse-neural-network-verilog
   ```
-- Place the trained model `cnn_model.pt` in the `model` folder.
-- Modify the CNN architecture in `scripts/cnn_model_arch.py` to match your model's parameters.
-- If using a dataset other than MNIST, update the dataset details in `scripts/generate_testbench.py` at line 223.
-- Generate updated verilog files:
+2. Place the trained model `cnn_model.pt` in the `model` folder.
+3. Modify the CNN architecture in `scripts/cnn_model_arch.py` to match your model's parameters.
+4. If using a dataset other than MNIST, update the dataset details in `scripts/generate_testbench.py` at line 223.
+5. Generate updated verilog files:
   ``` sh
   python scripts/generate_verilog_and_LUTs.py --in_size=<image_size> --num_classes=<num_classes>
   python scripts/generate_testbench.py --num_classes=<num_classes>
@@ -50,7 +50,7 @@ torch.save({'model': model.state_dict(),
   python scripts/generate_verilog_and_LUTs.py --in_size=28 --num_classes=10
   python scripts/generate_testbench.py --num_classes=10
   ```
-- Replace the following generated files with those in the src folder:
+6. Replace the following generated files with those in the src folder:
   - `cnn_model.v`
   - `testbench.v`
   - `lut_weights.v`
