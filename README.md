@@ -54,7 +54,7 @@ torch.save({'model': model.state_dict(),
   python scripts/generate_verilog_and_LUTs.py --in_size=28 --num_classes=10
   python scripts/generate_testbench.py --num_classes=10
   ```
-6. Note the approximate time for the output to stabilise in the output of `scripts/generate_testbench.py` log.
+6. Note the approximate time for the output to stabilise in the output of `scripts/generate_verilog_and_LUTs.py` log.
    
 7. Replace the following generated files with those in the src folder:
   - `cnn_model.v`
