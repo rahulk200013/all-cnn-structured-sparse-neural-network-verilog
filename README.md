@@ -54,7 +54,9 @@ torch.save({'model': model.state_dict(),
   python scripts/generate_verilog_and_LUTs.py --in_size=28 --num_classes=10
   python scripts/generate_testbench.py --num_classes=10
   ```
-6. Replace the following generated files with those in the src folder:
+6. Note the approximate time for the output to stabilise in the output of `scripts/generate_testbench.py` log.
+   
+7. Replace the following generated files with those in the src folder:
   - `cnn_model.v`
   - `testbench.v`
   - `lut_weights.v`
@@ -62,7 +64,7 @@ torch.save({'model': model.state_dict(),
   - `lut_index.v`
   - `lut_rpointer.v`
 
-7. Uncomment one of the input in `testbench.v` and run module `test_cnn()` in your simulation software.
+8. Uncomment one of the input in `testbench.v` and run module `test_cnn()` in your simulation software.
  
 ## References
 - [An Efficient Hardware Accelerator for Structured Sparse Convolutional Neural Networks on FPGAs](https://arxiv.org/abs/2001.01955)
