@@ -57,6 +57,8 @@ torch.save({'model': model.state_dict(),
   - `lut_biases.v`
   - `lut_index.v`
   - `lut_rpointer.v`
+
+7. Uncomment one of the input in `testbench.v` and run module `test_cnn()` in your simulation software.
  
 ## References
 - [An Efficient Hardware Accelerator for Structured Sparse Convolutional Neural Networks on FPGAs](https://arxiv.org/abs/2001.01955)
