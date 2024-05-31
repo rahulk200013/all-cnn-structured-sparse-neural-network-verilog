@@ -6,12 +6,12 @@ This project demonstrates the ASIC implementation of an All CNN Structured Spars
 
 ## Features
 - Fully parameterized architecture with customizable layers:
-  1 Input Channels
-  2 Input Size
-  3 Number of Kernels
-  4 Kernel Size
-  5 Stride
-  6 Padding
+  1. Input Channels
+  2. Input Size
+  3. Number of Kernels
+  4. Kernel Size
+  5. Stride
+  6. Padding
 - 16-bit fixed-point arithmetic (8 integer bits, 8 fractional bits).
 - Convolutional layers only; dense layers must be converted to 1x1 convolutional layers.
 - Global max pooling after convolutional layers.
