@@ -18,7 +18,6 @@ import argparse
 
 from collections import OrderedDict
 from cnn_model_arch import cnn_model
-from torchsummary import summary
 
 
 def decimalToBinary(num, k_prec) : 
@@ -293,7 +292,7 @@ def main():
 
     batch_size = 1
 
-    testset = datasets.MNIST('./data', train=False, download=True, transform=transforms.ToTensor())  # MNIST
+    # testset = datasets.MNIST('./data', train=False, download=True, transform=transforms.ToTensor())  # MNIST
     # testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size, shuffle=False, num_workers=4)
 
     new_state_dict = state_dict['model'] 

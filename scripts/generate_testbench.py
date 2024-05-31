@@ -17,7 +17,6 @@ from math import floor, log2
 
 from collections import OrderedDict
 from cnn_model_arch import cnn_model
-from torchsummary import summary
 
 def debug_model(model, loader):
     device = torch.device("cpu")
