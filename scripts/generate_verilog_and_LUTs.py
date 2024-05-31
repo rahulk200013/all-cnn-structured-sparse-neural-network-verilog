@@ -469,7 +469,7 @@ def main():
 
     
 
-    print('==> Generating all LUTs DONE')
+    print('DONE')
     print('\nMaximum errors after converting to binary:')
     print("Max error in weights: ", max(weights_error).item())
     print("Max error in biases: ", max(biases_error).item())
@@ -479,7 +479,7 @@ def main():
 
     
 
-    print("\n==> Generating verilog file:")
+    print("\n==> Generating main verilog file:")
 
     layers = model_depth(model)
 
@@ -530,7 +530,7 @@ def main():
         else:
             f.write("          OUTPUT_SIZE_" + str(i+1) + " = " + "(((IN_SIZE_" + str(i+1) + " - KER_SIZE_" + str(i+1) + " + 2*PADDING_" + str(i+1) + ")/STRIDE_" + str(i+1) + ")+1),\n\n\n")
 
-    f.write("output reg [3:0] out;\n")
+    f.write("output reg [$clog2(NUM_CLASSES)-1:0] out;\n")
     f.write("input [(IN_SIZE_1**2)*IN_CHANNELS_1*BIT_SIZE-1:0] in;\n\n")
     f.write("input clk, rst;\n\n")
     f.write("// Wires for weights coming from LUTs\n")
@@ -623,10 +623,12 @@ def main():
 
     f.close()
 
-    print("==> Generating verilog file DONE")
-    print("Verilog file has been saved as cnn_mnist.v")
+    print("DONE")
+    print("\n########################################")
+    print("Approx time for stable output: ", str(2*(sum(non_zero_weigths_list)+7)/100) + " ns")
+    print("########################################")
 
-    print("Finished Successfully")
+    print("\nFinished Successfully")
 
 
 

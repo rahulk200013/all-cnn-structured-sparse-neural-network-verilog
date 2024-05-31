@@ -106,7 +106,7 @@ parameter BIT_SIZE = 16,
           OUTPUT_SIZE_9 = (((IN_SIZE_9 - KER_SIZE_9 + 2*PADDING_9)/STRIDE_9)+1);
 
 
-output reg [3:0] out;
+output reg [$clog2(NUM_CLASSES)-1:0] out;
 input [(IN_SIZE_1**2)*IN_CHANNELS_1*BIT_SIZE-1:0] in;
 
 input clk, rst;

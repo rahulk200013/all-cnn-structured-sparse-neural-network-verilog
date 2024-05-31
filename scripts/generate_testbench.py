@@ -293,10 +293,10 @@ def main():
     f.write("    // Uncomment any one of the input to test\n\n")
     for i in range(5):
         f.write("    // " + str(labels_list[i]) + "\n")
-        f.write("    // in = " + str(len(img_str)) + "'b" + binary_inputs[i] + "\n\n")
+        f.write("    // in = " + str(len(img_str)) + "'b" + binary_inputs[i] + ";\n\n")
 
-    f.write("end")
-    f.write("endmodule")
+    f.write("end\n")
+    f.write("endmodule\n")
 
     f.close()
 

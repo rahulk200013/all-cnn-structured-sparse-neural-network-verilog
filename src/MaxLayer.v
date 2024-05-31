@@ -3,13 +3,13 @@ parameter BIT_SIZE=8,     // No of bits in each input
           NUM_CLASSES=10;  // Total no of inputs
 
 // Input and Output ports
-output reg [$clog2(NUM_CLASSES):0] out;
+output reg [$clog2(NUM_CLASSES)-1:0] out;
 input [BIT_SIZE*NUM_CLASSES-1:0] in;
 input clk, rst;
 
 // Internal variables
-reg [$clog2(NUM_CLASSES):0] count;
-reg [$clog2(NUM_CLASSES):0] temp_out;
+reg [$clog2(NUM_CLASSES)-1:0] count;
+reg [$clog2(NUM_CLASSES)-1:0] temp_out;
 reg [BIT_SIZE-1:0] max_val;
 
 
